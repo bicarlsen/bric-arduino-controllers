@@ -1,0 +1,17 @@
+*IDN?
+ECHO <ON|OFF>
+:SOURce:VOLTAage 12.34mV
+:SOURce:CURRent 0.123mA
+:MEASure:VOLTage
+:MEASure:CURRent
+:CHANnel:LOCAl ?   query returns CHAN:LOCA <LOCAL|REMOTE>
+:CHANnel:MODE ?<CURRENT|LIGHT>
+:CHANnel:RANGe ?<HIGH|LOW>
+
+source voltage and measure voltage set and return DAC and ADC voltages directly without conversion.  They are intended for calibration use only.
+in high light mode, measure current returns the photodiode current in milliamperes.
+in low light mode, measure current returns the photodiode current in microamperes.
+source current sets the desired current value in the units specified.  A (or blank) for amps, mA for milliamps and uA for microamps.
+in constant current mode, source current sets the current to be sent to the LEDs. 
+in constant light mode, source current sets the photodiode current that the regulator seeks to obtain.  
+ECHO on/off turns terminal echo on and off.  it is off by default.
